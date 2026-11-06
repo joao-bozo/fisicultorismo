@@ -108,9 +108,9 @@ footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
 .loss-grid article { min-height: 520px; display: grid; grid-template-rows: 270px 1fr; background: rgba(255,255,255,.55); }
 .loss-photo { min-height: 270px; overflow: hidden; background: var(--ink); }
 .loss-photo img { width: 100%; height: 100%; filter: grayscale(1); object-fit: cover; object-position: center top; }
-.loss-grid article:nth-child(1) .loss-photo img { object-position: center 18%; transform: scale(1.04); }
+.loss-grid article:nth-child(1) .loss-photo img { object-position: center 18%; transform: scale(.88); }
 .loss-grid article:nth-child(2) .loss-photo img { object-position: center 20%; }
-.loss-grid article:nth-child(3) .loss-photo img { object-position: center 18%; transform: scale(1.03); }
+.loss-grid article:nth-child(3) .loss-photo img { object-position: center 48%; transform: scale(.96); }
 .loss-grid article:nth-child(4) .loss-photo img { object-position: center 20%; }
 .loss-grid article > div:last-child { padding: 22px; }
 .loss-grid article span { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
@@ -118,6 +118,28 @@ footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
 .loss-grid article p { font-size: 13px; line-height: 1.55; }
 .memorial-glyph { display: grid; place-items: center; align-content: center; gap: 12px; color: var(--blue); background: var(--ink); font: 800 90px/1 "Barlow Condensed", sans-serif; }
 .memorial-glyph span { font: 600 11px/1 "DM Sans", sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+.championships { padding: 110px 0; background: var(--paper); }
+.championships-head { display: grid; grid-template-columns: 25% 75%; align-items: end; margin-bottom: 55px; }
+.championships-head h2, .professional-head h2 { font-size: clamp(68px, 8vw, 118px); line-height: .78; }
+.championships-head > p:last-child { grid-column: 2; max-width: 760px; margin-top: 28px; font-size: 18px; line-height: 1.55; }
+.championship-list { border-top: 1px solid var(--ink); }
+.championship-list article { display: grid; grid-template-columns: 20% 80%; gap: 0; border-bottom: 1px solid var(--ink); padding: 32px 0; }
+.championship-year { font: 800 46px/.9 "Barlow Condensed", sans-serif; color: var(--orange); }
+.championship-list h3, .path-grid h3 { margin: 8px 0 16px; font-size: 42px; text-transform: uppercase; }
+.championship-list p:last-child { max-width: 850px; color: #55564f; font-size: 15px; line-height: 1.65; }
+.professional-path { padding: 110px 0; background: var(--acid); }
+.professional-head { display: grid; grid-template-columns: 58% 42%; align-items: end; margin-bottom: 55px; }
+.professional-head h2 { margin-top: 20px; }
+.professional-head > p:last-child { padding-left: 30px; font-size: 17px; line-height: 1.55; }
+.path-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
+.path-grid article { min-height: 330px; padding: 28px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.path-grid article > span { font: 800 58px/.8 "Barlow Condensed", sans-serif; color: var(--orange); }
+.path-grid p { font-size: 14px; line-height: 1.58; }
+.pro-tips { margin-top: 45px; display: grid; grid-template-columns: 28% 72%; }
+.pro-tips h3 { font-size: 38px; text-transform: uppercase; }
+.pro-tips ul { margin: 0; padding-left: 22px; }
+.pro-tips li { margin-bottom: 12px; line-height: 1.55; }
+.health-note { margin-top: 40px; padding: 18px 20px; border-left: 5px solid var(--orange); background: rgba(255,255,255,.5); }
 .categories-head .section-index { color: var(--green); }
 .profession-fair { padding: 100px 0; background: #a9d5b2; color: var(--ink); }
 .profession-fair h2 { margin: 20px 0 16px; font: 800 clamp(70px, 9vw, 130px)/.82 "Barlow Condensed", sans-serif; }
@@ -151,6 +173,11 @@ footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
   .loss-grid { grid-template-columns: 1fr; }
   .fair-gallery { grid-template-columns: 1fr 1fr; }
   .photo-slot { height: 220px; }
+  .championships-head, .professional-head, .pro-tips { grid-template-columns: 1fr; }
+  .championships-head > p:last-child, .professional-head > p:last-child { grid-column: 1; padding-left: 0; }
+  .championship-list article { grid-template-columns: 25% 75%; }
+  .path-grid { grid-template-columns: 1fr 1fr; }
+  .pro-tips { gap: 20px; }
   .category-row button { grid-template-columns: 12% 78% 10%; height: 92px; }
   .name { font-size: 42px; }
   .category-row.open .category-content { padding-bottom: 30px; }
