@@ -16,3 +16,44 @@ document.querySelectorAll('.category-row button').forEach((button) => {
     }
   });
 });
+
+document.querySelectorAll('.loss-card').forEach((card) => {
+  const front = card.querySelector('.loss-card-flip');
+  const back = card.querySelector('.loss-card-back');
+  const backButton = card.querySelector('.loss-card-return');
+
+  const setFlipped = (flipped) => {
+    card.classList.toggle('is-flipped', flipped);
+    front.setAttribute('aria-expanded', String(flipped));
+    front.parentElement.setAttribute('aria-hidden', String(flipped));
+    front.parentElement.inert = flipped;
+    back.setAttribute('aria-hidden', String(!flipped));
+    back.inert = !flipped;
+  };
+
+  card.addEventListener('pointerenter', () => setFlipped(true));
+  card.addEventListener('pointerleave', () => setFlipped(false));
+
+  front.addEventListener('click', (event) => {
+    event.preventDefault();
+    setFlipped(true);
+  });
+
+  front.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    setFlipped(true);
+  });
+
+  backButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    setFlipped(false);
+  });
+
+  card.addEventListener('touchstart', (event) => {
+    if (event.target.closest('.loss-card-return')) return;
+    event.preventDefault();
+    setFlipped(true);
+  }, { passive: false });
+
+  card.addEventListener('touchend', () => setFlipped(false));
+});
