@@ -4,7 +4,7 @@
   --acid: #3cff7a;
   --green: #0b3b27;
   --blue: #bdefff;
-  --orange: #ff5533;
+  --gold: #c9a45a;
   --line: rgba(9, 12, 10, .18);
 }
 * { box-sizing: border-box; }
@@ -14,7 +14,7 @@ img { width: 100%; height: 100%; object-fit: cover; display: block; }
 a { color: inherit; text-decoration: none; }
 .wrap { width: min(1180px, calc(100% - 64px)); margin-inline: auto; }
 .brand { font: 800 25px/1 "Barlow Condensed", sans-serif; letter-spacing: 0; }
-.brand span { color: var(--orange); }
+.brand span { color: var(--gold); }
 .hero { min-height: 820px; position: relative; overflow: hidden; color: var(--paper); background: var(--ink); }
 .nav { height: 90px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.16); }
 .nav-links { display: flex; gap: 36px; font-size: 13px; }
@@ -27,7 +27,7 @@ a { color: inherit; text-decoration: none; }
 .eyebrow { color: var(--acid); }
 h1, h2, h3 { margin: 0; font-family: "Barlow Condensed", sans-serif; }
 h1 { margin-top: 28px; font-size: clamp(100px, 10vw, 155px); line-height: .76; letter-spacing: 0; }
-h1 em, h2 em { color: var(--orange); font-style: italic; }
+h1 em, h2 em { color: var(--gold); font-style: italic; }
 .intro { max-width: 440px; margin: 34px 0 28px; color: rgba(241,239,232,.72); line-height: 1.65; }
 .primary-button { display: inline-flex; align-items: center; gap: 55px; background: var(--acid); color: var(--ink); padding: 17px 20px; font-size: 13px; font-weight: 700; }
 .hero-portrait { position: absolute; right: 0; bottom: 0; width: 58%; height: 690px; margin: 0; filter: grayscale(1) contrast(1.08); }
@@ -38,7 +38,7 @@ h1 em, h2 em { color: var(--orange); font-style: italic; }
 .hero-stat span { width: 100px; font-size: 11px; line-height: 1.4; }
 .manifesto { padding: 110px 0 70px; }
 .manifesto-grid { display: grid; grid-template-columns: 25% 75%; }
-.section-index { color: var(--orange); }
+.section-index { color: var(--gold); }
 .manifesto h2, .giants h2, .categories h2 { font-size: clamp(68px, 8vw, 118px); line-height: .78; }
 .lead { max-width: 760px; font-size: clamp(20px, 2vw, 28px); line-height: 1.45; }
 .timeline { margin-top: 75px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
@@ -46,7 +46,7 @@ h1 em, h2 em { color: var(--orange); font-style: italic; }
 .timeline article:nth-child(4n) { border-right: 0; }
 .timeline article:not(:first-child) { padding-left: 28px; }
 .timeline article:last-child { border-right: 0; }
-.year { font: 800 42px "Barlow Condensed", sans-serif; color: var(--orange); }
+.year { font: 800 42px "Barlow Condensed", sans-serif; color: var(--gold); }
 .timeline h3 { margin-top: 28px; font-size: 25px; text-transform: uppercase; }
 .timeline p { color: #62635d; font-size: 14px; line-height: 1.55; }
 .giants { padding: 110px 0; background: var(--green); color: var(--paper); }
@@ -83,7 +83,7 @@ h1 em, h2 em { color: var(--orange); font-style: italic; }
 .category-row { border-top: 1px solid var(--ink); }
 .category-row:last-child { border-bottom: 1px solid var(--ink); }
 .category-row button { width: 100%; height: 112px; border: 0; background: transparent; display: grid; grid-template-columns: 12% 78% 10%; align-items: center; padding: 0; cursor: pointer; text-align: left; color: var(--ink); }
-.number { font: 700 13px "Barlow Condensed", sans-serif; color: var(--orange); }
+.number { font: 700 13px "Barlow Condensed", sans-serif; color: var(--gold); }
 .name { font: 800 clamp(46px, 6vw, 78px)/1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
 .toggle { justify-self: end; width: 38px; height: 38px; border: 1px solid var(--ink); border-radius: 50%; text-align: center; line-height: 34px; font-size: 24px; }
 .category-content { display: none; grid-template-columns: 25% 75%; gap: 0; border-top: 1px solid var(--line); padding: 36px 0 46px; }
@@ -100,8 +100,9 @@ h1 em, h2 em { color: var(--orange); font-style: italic; }
 .category-copy h4 + p { font-size: 14px; }
 .fact-note { width: min(1180px, calc(100% - 64px)); margin: 24px auto 0; text-align: right; font-size: 10px; color: #777870; }
 footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
-.footer-inner { height: 120px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
-.footer-inner p { color: rgba(255,255,255,.55); }
+.footer-inner { min-height: 120px; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 20px; font-size: 12px; }
+.footer-inner p { margin: 0; color: rgba(255,255,255,.55); }
+.footer-credit { font-size: 11px; line-height: 1.5; text-align: center; }
 .losses { padding: 110px 0; background: var(--blue); }
 .losses-head { display: grid; grid-template-columns: 25% 75%; }
 .losses-head h2 { font-size: clamp(68px, 8vw, 118px); line-height: .78; }
@@ -122,7 +123,7 @@ footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
 .loss-card-flip span:first-child { color: var(--acid); font-size: 11px; font-weight: 700; text-transform: uppercase; }
 .loss-card-flip strong { font: 800 48px/1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
 .loss-card-flip span:last-child { margin-top: 10px; font-size: 12px; }
-.loss-card-back { overflow-y: auto; padding: 22px; background: rgba(255,255,255,.7); transform: rotateY(180deg); scrollbar-color: var(--orange) transparent; }
+.loss-card-back { overflow-y: auto; padding: 22px; background: rgba(255,255,255,.7); transform: rotateY(180deg); scrollbar-color: var(--gold) transparent; }
 .loss-card-back > div { padding: 0; }
 .loss-card-back > div > span { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
 .loss-card-back h3 { margin-top: 8px; font-size: 38px; text-transform: uppercase; }
@@ -147,7 +148,7 @@ footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
 .championships-head > p:last-child { grid-column: 2; max-width: 760px; margin-top: 28px; font-size: 18px; line-height: 1.55; }
 .championship-list { border-top: 1px solid var(--ink); }
 .championship-list article { display: grid; grid-template-columns: 20% 80%; gap: 0; border-bottom: 1px solid var(--ink); padding: 32px 0; }
-.championship-year { font: 800 46px/.9 "Barlow Condensed", sans-serif; color: var(--orange); }
+.championship-year { font: 800 46px/.9 "Barlow Condensed", sans-serif; color: var(--gold); }
 .championship-list h3, .path-grid h3 { margin: 8px 0 16px; font-size: 42px; text-transform: uppercase; }
 .championship-list p:last-child { max-width: 850px; color: #55564f; font-size: 15px; line-height: 1.65; }
 .professional-path { padding: 110px 0; color: var(--ink); background: #fff; --gold: #b89445; --gold-line: rgba(184,148,69,.48); }
@@ -165,16 +166,18 @@ footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
 .pro-tips li { margin-bottom: 12px; line-height: 1.55; }
 .health-note { margin-top: 40px; padding: 18px 20px; border-left: 5px solid var(--gold); background: #fbf8ef; }
 .categories-head .section-index { color: var(--green); }
-.profession-fair { padding: 100px 0; background: #a9d5b2; color: var(--ink); }
+.profession-fair { padding: 100px 0; background: linear-gradient(135deg, #f6e8bd 0%, #cda853 28%, #7f5d1d 100%); color: var(--ink); }
+.profession-fair .section-index { color: rgba(9,12,10,.72); }
 .profession-fair h2 { margin: 20px 0 16px; font: 800 clamp(70px, 9vw, 130px)/.82 "Barlow Condensed", sans-serif; }
+.fair-poster { display: grid; gap: 12px; }
 .fair-intro { max-width: 660px; font-size: 17px; line-height: 1.55; }
-.fair-gallery { margin-top: 45px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.photo-slot { height: 290px; border: 1px dashed rgba(9,12,10,.55); display: grid; place-items: center; background: rgba(255,255,255,.18); }
-.photo-slot span { font: 700 12px "Barlow Condensed", sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+.fair-callout { display: inline-flex; flex-direction: column; width: fit-content; padding: 18px 24px; background: rgba(9,12,10,.85); color: #f5e7b9; border: 1px solid rgba(9,12,10,.1); }
+.fair-callout span { font: 700 11px/1 "Barlow Condensed", sans-serif; letter-spacing: 1.5px; text-transform: uppercase; }
+.fair-callout strong { margin-top: 8px; font: 800 34px/1 "Barlow Condensed", sans-serif; }
 .pioneers { padding: 110px 0; background: var(--paper); }
 .pioneers-head { display: grid; grid-template-columns: 25% 75%; align-items: end; margin-bottom: 18px; }
 .pioneers-head h2 { font-size: clamp(68px, 8vw, 118px); line-height: .78; }
-.pioneers-head h2 em { color: var(--orange); }
+.pioneers-head h2 em { color: var(--gold); }
 .pioneers-head > p:last-child { grid-column: 2; max-width: 760px; margin-top: 28px; font-size: 18px; line-height: 1.55; }
 .pioneer-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start; }
 .pioneer-card { min-width: 0; color: var(--paper); background: var(--ink); display: flex; flex-direction: column; align-self: stretch; }
@@ -229,7 +232,8 @@ footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
   .category-row.open .category-content { padding-bottom: 30px; }
   .category-meta { border-right: 0; border-bottom: 1px solid rgba(23,25,21,.25); padding-bottom: 18px; }
   .category-copy { padding: 22px 0 0; }
-  .footer-inner { gap: 15px; }
+  .footer-inner { flex-wrap: wrap; justify-content: center; gap: 15px; }
+  .footer-credit { flex-basis: 100%; }
 }
 @media (max-width: 430px) {
   .athlete-stories { grid-template-columns: 1fr; }
@@ -246,5 +250,5 @@ footer { margin-top: 60px; color: var(--paper); background: var(--ink); }
   .timeline article, .timeline article:not(:first-child) { border-right: 0; border-bottom: 1px solid var(--line); padding-left: 0; }
   .name { font-size: 34px; }
   .toggle { width: 34px; height: 34px; line-height: 30px; }
-  .footer-inner p { display: none; }
+  .footer-tagline { display: none; }
 }
